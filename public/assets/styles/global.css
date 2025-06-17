@@ -1,0 +1,38 @@
+.aside-products:has(.product:hover) .product:not(:hover) {
+    transition: 0.4s ease-in;
+    opacity: 0.4;
+}
+/* Dropdown styles */
+.dropdown-menu {
+    transition: all 0.3s ease;
+}
+
+.dropdown-menu a {
+    transition: background-color 0.2s;
+}
+
+/* Animation for dropdown */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdown-menu:not(.hidden) {
+    animation: fadeIn 0.3s ease forwards;
+}
+
+.quantity-input {
+    -moz-appearance: textfield;
+}
+
+.quantity-input::-webkit-outer-spin-button,
+.quantity-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
